@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 function Lifting() {
-  const [textInput, setTextInput] = useState('name')
+  const [textInput, setTextInput] = useState(0)
   function handleChange(event) {
     setTextInput(event.target.value)
   }

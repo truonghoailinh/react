@@ -6,6 +6,8 @@ import Conditional from './main-concert/conditional'
 import List from './main-concert/listEndKey'
 import Form from './main-concert/form'
 import Lifting from './main-concert/lifting'
+import Course from './Plu/course'
+import AppGithub from './GithubCard/app'
 function App() {
   return (
     <div className="App">
@@ -16,6 +18,12 @@ function App() {
       <List />
       <Form />
       <Lifting />
+
+
+      <Course />
+
+      <AppGithub title="The GitHub Card App"/>
+
     </div>
   );
 }
