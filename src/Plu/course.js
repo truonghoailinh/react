@@ -15,7 +15,6 @@ function course() {
   const newObject = {
     ...person
   }
-  console.log(first, newArray, newObject)
 
   // template string
   const greeting = 'Hello World'
@@ -23,7 +22,6 @@ function course() {
   const html = `
     <div>${Math.random()} ${greeting} ${answer}</div>
   `
-  console.log(html)
   // Classes
 
   class Person {
@@ -31,7 +29,6 @@ function course() {
       this.name = name
     }
     greet() {
-      console.log(`Hello ${this.name}!`)
     }
   }
 
@@ -41,7 +38,6 @@ function course() {
       this.level = level
     }
     greet() {
-      console.log(`Hello ${this.name} from ${this.level}`)
     }
   }
 
@@ -57,7 +53,6 @@ function course() {
   const fetchData = () => {
     fetch('https://jsonplaceholder.typicode.com/posts/1').then(resp => {
       resp.json().then(data => {
-        console.log(data)
       })
     })
   }
@@ -66,7 +61,6 @@ function course() {
   const fetchAsync = async () => {
     const resp = await fetch('https://jsonplaceholder.typicode.com/posts/2')
     const data = await resp.json()
-    console.log(data)
   }
   fetchAsync()
   return(

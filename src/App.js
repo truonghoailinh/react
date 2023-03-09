@@ -8,6 +8,7 @@ import Form from './main-concert/form'
 import Lifting from './main-concert/lifting'
 import Course from './Plu/course'
 import AppGithub from './GithubCard/app'
+import StartMatch from './Plu/gameStar'
 function App() {
   return (
     <div className="App">
@@ -24,6 +25,7 @@ function App() {
 
       <AppGithub title="The GitHub Card App"/>
 
+      <StartMatch />
     </div>
   );
 }
