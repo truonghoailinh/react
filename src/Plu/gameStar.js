@@ -59,21 +59,16 @@ const StartMatch = () => {
   const candidateAreWrong = utils.sum(candidateNums) > stars
 
   const numberStatus = (number) => {
-    console.log(number, '=22=', availableNums)
-    console.log(!availableNums.includes(number))
     if (!availableNums.includes(number)) {
-      console.log(number, 'used')
       return 'used'
     }
     if (candidateNums.includes(number)) {
-      console.log(number, 'wrong, candidate')
       return candidateAreWrong ? 'wrong': 'candidate'
     }
     return 'available'
   }
 
   const onNumberClick = (number, currentStatus) => {
-    console.log(number, currentStatus)
     if (currentStatus === 'used') {
       return;
     }
@@ -82,7 +77,7 @@ const StartMatch = () => {
       setCandidateNums(newCandidateNumber)
     } else {
       const newAvailableNums = availableNums.filter(
-        n => newCandidateNumber.includes(n)
+        n => !newCandidateNumber.includes(n)
       )
       setStars(utils.randomSumIn(newAvailableNums, 9))
       setAvailableNums(newAvailableNums)
